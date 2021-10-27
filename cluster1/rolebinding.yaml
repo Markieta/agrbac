@@ -1,4 +1,5 @@
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project1admins
@@ -15,6 +16,7 @@ subjects:
   kind: User
   name: admin2@github
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project1devs
@@ -31,6 +33,7 @@ subjects:
   kind: User
   name: dev2@github
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project1viewers
@@ -47,6 +50,7 @@ subjects:
   kind: User
   name: viewer2@github
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project2admins
@@ -60,6 +64,7 @@ subjects:
   kind: User
   name: admin1@github
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project2devs
@@ -73,6 +78,7 @@ subjects:
   kind: User
   name: dev2@github
 ---
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: project2viewers
