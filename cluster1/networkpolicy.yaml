@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: example
+  namespace: project3
+spec:
+  podSelector:
+    matchLabels:
+      role: db
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              project: myproject
+        - podSelector:
+            matchLabels:
+              role: somerole
+      ports:
+        - protocol: TCP
+          port: 6379
