@@ -1,0 +1,32 @@
+---
+kind: RoleBinding
+metadata:
+  name: project1admins
+  namespace: project1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin1@github
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin2@github
+---
+kind: RoleBinding
+metadata:
+  name: project1devs
+  namespace: project1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: edit
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dev1@github
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dev2@github
