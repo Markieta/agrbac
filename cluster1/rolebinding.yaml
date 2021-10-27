@@ -94,3 +94,31 @@ subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
   name: viewer3@github
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: project3viewers
+  namespace: project3
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: viewer
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: viewer33@github
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: project3admins
+  namespace: project3
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: viewer
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin333@github
