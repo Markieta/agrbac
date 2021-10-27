@@ -1,0 +1,87 @@
+---
+kind: RoleBinding
+metadata:
+  name: project1admins
+  namespace: project1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin4@github
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin5@github
+---
+kind: RoleBinding
+metadata:
+  name: project1devs
+  namespace: project1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: edit
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dev5github
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dev4github
+---
+kind: RoleBinding
+metadata:
+  name: project1viewers
+  namespace: project1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: viewer
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: viewer4github
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: viewer5github
+---
+kind: RoleBinding
+metadata:
+  name: project2admins
+  namespace: project2
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: admin5@github
+---
+kind: RoleBinding
+metadata:
+  name: project2devs
+  namespace: project2
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: edit
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: dev4@github
+---
+kind: RoleBinding
+metadata:
+  name: project2viewers
+  namespace: project2
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: viewer
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: viewer6@github
